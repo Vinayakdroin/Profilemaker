@@ -125,144 +125,45 @@ function generatePDF() {
     document.getElementById('loadingIndicator').style.display = 'block';
     document.getElementById('aedpForm').style.display = 'none';
     
-    setTimeout(() => {
-        try {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            const formData = getFormData();
-            
-            // PDF Configuration
-            const pageWidth = doc.internal.pageSize.width;
-            const pageHeight = doc.internal.pageSize.height;
-            const margin = 20;
-            const lineHeight = 7;
-            let yPosition = margin;
-            
-            // Helper function to add text with word wrap
-            function addText(text, fontSize = 10, isBold = false) {
-                if (yPosition > pageHeight - 30) {
-                    doc.addPage();
-                    yPosition = margin;
-                }
-                
-                doc.setFontSize(fontSize);
-                doc.setFont('helvetica', isBold ? 'bold' : 'normal');
-                
-                const splitText = doc.splitTextToSize(text, pageWidth - 2 * margin);
-                doc.text(splitText, margin, yPosition);
-                yPosition += splitText.length * lineHeight;
-                
-                return yPosition;
-            }
-            
-            function addSection(title, content) {
-                yPosition += 5; // Extra space before section
-                addText(title, 12, true);
-                yPosition += 3; // Space after title
-                
-                Object.entries(content).forEach(([key, value]) => {
-                    if (value) {
-                        const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                        addText(`${formattedKey}: ${Array.isArray(value) ? value.join(', ') : value}`);
-                    }
-                });
-                
-                yPosition += 5; // Space after section
-            }
-            
-            // Title
-            addText('AEDP LEAD PSYCHOLOGICAL PROFILE & SCRIPT ADHERENCE FORM', 16, true);
-            addText(`Generated on: ${new Date().toLocaleDateString()}`, 10);
-            yPosition += 10;
-            
-            // Section 0: Personal Information
-            addSection('0. PERSONAL INFORMATION', {
-                'Full Name': formData.fullName,
-                'Mobile Number': formData.mobileNumber,
-                'Email Address': formData.emailAddress,
-                'Current City': formData.currentCity
-            });
-            
-            // Section 1: First Contact
-            addSection('1. FIRST CONTACT', {
-                'Exclusivity Line Used': formData.exclusivityLine,
-                'Candidate Reaction': formData.candidateReaction
-            });
-            
-            // Section 2: Qualification Questions
-            addSection('2. QUALIFICATION QUESTIONS', {
-                'Name & Education': formData.nameEducation,
-                'Program Interest': formData.programInterest,
-                'Part-time Work': formData.partTimeWork,
-                'Communication Comfort': formData.commsComfort,
-                'Career Goal': formData.careerGoal
-            });
-            
-            // Section 3: Core Motivation & Pain Points
-            addSection('3. CORE MOTIVATION & PAIN POINTS', {
-                'Primary Why': formData.primaryWhy,
-                'Biggest Worry': formData.biggestWorry,
-                'Past Disappointments': formData.pastDisappointments
-            });
-            
-            // Section 4: Decision Style & Influencers
-            addSection('4. DECISION STYLE & INFLUENCERS', {
-                'Decision Speed': formData.decisionSpeed,
-                'Influencers': formData.influencers,
-                'Scarcity Reaction': formData.scarcityReaction
-            });
-            
-            // Section 5: Communication & Personality Lens
-            addSection('5. COMMUNICATION & PERSONALITY LENS', {
-                'Preferred Tone': formData.preferredTone,
-                'Channel': formData.channel,
-                'Detail Level': formData.detailLevel,
-                'Personality Model': formData.personalityModel,
-                'Assigned Traits': formData.assignedTraits
-            });
-            
-            // Section 6: Objections & Triggers
-            addSection('6. OBJECTIONS & TRIGGERS', {
-                'Stated Objections': formData.statedObjections,
-                'Unspoken Hesitations': formData.unspokenHesitations,
-                'Key Trigger': formData.keyTrigger
-            });
-            
-            // Section 7: Next Steps & Close
-            addSection('7. NEXT STEPS & CLOSE', {
-                'Follow-up Ask': formData.followupAsk,
-                'Custom Benefit': formData.customBenefit
-            });
-            
-            // Section 8: Follow-up Schedule & Signature
-            addSection('8. FOLLOW-UP SCHEDULE & SIGNATURE', {
-                'Next Reminder': formData.nextReminderDateTime,
-                'Channel & Format': formData.channelFormat,
-                'Executive Signature': formData.executiveSignature
-            });
-            
-            // Footer
-            yPosition = pageHeight - 20;
-            addText('This document is confidential and for internal use only.', 8);
-            
-            // Save PDF
-            const fileName = `AEDP_Profile_${formData.fullName.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.pdf`;
-            doc.save(fileName);
-            
-            // Hide loading and show success message
-            document.getElementById('loadingIndicator').style.display = 'none';
-            document.getElementById('aedpForm').style.display = 'block';
-            
-            // Show success alert
-            showAlert('PDF generated successfully!', 'success');
-            
-        } catch (error) {
-            console.error('Error generating PDF:', error);
-            document.getElementById('loadingIndicator').style.display = 'none';
-            document.getElementById('aedpForm').style.display = 'block';
-            showAlert('Error generating PDF. Please try again.', 'danger');
+    const formData = getFormData();
+    
+    // Send form data to Flask backend
+    fetch('/generate_pdf', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('PDF generation failed');
         }
-    }, 500); // Small delay to show loading indicator
+        return response.blob();
+    })
+    .then(blob => {
+        // Create download link
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `AEDP_Profile_${formData.fullName.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.pdf`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+        
+        // Hide loading and show success message
+        document.getElementById('loadingIndicator').style.display = 'none';
+        document.getElementById('aedpForm').style.display = 'block';
+        showAlert('PDF generated successfully!', 'success');
+    })
+    .catch(error => {
+        console.error('Error generating PDF:', error);
+        document.getElementById('loadingIndicator').style.display = 'none';
+        document.getElementById('aedpForm').style.display = 'block';
+        showAlert('Error generating PDF. Please try again.', 'danger');
+    });
 }
 
 function clearForm() {
