@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEDP Lead Psychological Profile Form</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container py-4">
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <h1 class="display-5 fw-bold text-primary">
+                <i class="fas fa-user-chart me-2"></i>
+                AEDP Lead Psychological Profile
+            </h1>
+            <p class="lead text-muted">Script Adherence Form for Sales Associates</p>
+        </div>
+
+        <!-- Form -->
+        <form id="aedpForm" class="needs-validation" novalidate>
+            
+            <!-- Section 0: Personal Information -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-user me-2"></i>
+                        0. Personal Information
+                    </h3>
+                    <small class="text-light">Before you start, ensure you've confirmed these</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="fullName" required>
+                            <div class="invalid-feedback">Please provide a full name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="mobileNumber" class="form-label">Mobile Number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="mobileNumber" required>
+                            <div class="invalid-feedback">Please provide a mobile number.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="emailAddress" class="form-label">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="emailAddress" required>
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="currentCity" class="form-label">Current City / Location <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="currentCity" required>
+                            <div class="invalid-feedback">Please provide current city/location.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: First Contact -->
+            <div class="card mb-4">
+                <div class="card-header bg-info">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-handshake me-2"></i>
+                        1. First Contact
+                    </h3>
+                    <small class="text-light">Step 1: "Hi, this is [Name] from PrincipleAEDP…"</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Did we open with the exclusivity line?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exclusivityLine" id="exclusivityYes" value="Yes">
+                                <label class="form-check-label" for="exclusivityYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exclusivityLine" id="exclusivityNo" value="No">
+                                <label class="form-check-label" for="exclusivityNo">No</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Candidate reacted positively?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="candidateReaction" id="reactionYes" value="Yes">
+                                <label class="form-check-label" for="reactionYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="candidateReaction" id="reactionNo" value="No">
+                                <label class="form-check-label" for="reactionNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Qualification Questions -->
+            <div class="card mb-4">
+                <div class="card-header bg-success">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-clipboard-question me-2"></i>
+                        2. Qualification Questions
+                    </h3>
+                    <small class="text-light">Step 2: Ask those 5 quick qualifiers</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nameEducation" class="form-label">Name & current education level</label>
+                            <input type="text" class="form-control" id="nameEducation">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Program interest</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="programInterest" id="degree" value="Degree">
+                                <label class="form-check-label" for="degree">Degree</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="programInterest" id="aedp" value="AEDP">
+                                <label class="form-check-label" for="aedp">AEDP</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Any part-time work/volunteering/business?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="partTimeWork" id="partTimeYes" value="Yes">
+                                <label class="form-check-label" for="partTimeYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="partTimeWork" id="partTimeNo" value="No">
+                                <label class="form-check-label" for="partTimeNo">No</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Comfort with comms (teamwork/presentations?)</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="commsComfort" id="commsHigh" value="High">
+                                <label class="form-check-label" for="commsHigh">High</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="commsComfort" id="commsMedium" value="Medium">
+                                <label class="form-check-label" for="commsMedium">Medium</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="commsComfort" id="commsLow" value="Low">
+                                <label class="form-check-label" for="commsLow">Low</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="careerGoal" class="form-label">Main career goal after graduation</label>
+                            <input type="text" class="form-control" id="careerGoal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Core Motivation & Pain Points -->
+            <div class="card mb-4">
+                <div class="card-header bg-warning">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-bullseye me-2"></i>
+                        3. Core Motivation & Pain Points
+                    </h3>
+                    <small class="text-dark">Step 4: Build value (UGC, stipend, experience)</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Primary "Why"</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="primaryWhy" id="careerGrowth" value="Career growth">
+                                <label class="form-check-label" for="careerGrowth">Career growth</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="primaryWhy" id="stipend" value="Stipend">
+                                <label class="form-check-label" for="stipend">Stipend</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="primaryWhy" id="experience" value="Experience">
+                                <label class="form-check-label" for="experience">Experience</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="primaryWhy" id="prestige" value="Prestige">
+                                <label class="form-check-label" for="prestige">Prestige</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="primaryWhy" id="otherWhy" value="Other">
+                                <label class="form-check-label" for="otherWhy">Other</label>
+                            </div>
+                            <input type="text" class="form-control mt-2" id="otherWhyText" placeholder="If other, specify...">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="biggestWorry" class="form-label">Biggest worry (e.g., workload, relocation)</label>
+                            <textarea class="form-control" id="biggestWorry" rows="3"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="pastDisappointments" class="form-label">Past disappointments (if any)</label>
+                            <textarea class="form-control" id="pastDisappointments" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Decision Style & Influencers -->
+            <div class="card mb-4">
+                <div class="card-header bg-danger">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-users me-2"></i>
+                        4. Decision Style & Influencers
+                    </h3>
+                    <small class="text-light">Step 5: Screening & Scarcity cues</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Decision speed</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="decisionSpeed" id="quick" value="Quick">
+                                <label class="form-check-label" for="quick">Quick</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="decisionSpeed" id="needsTime" value="Needs time">
+                                <label class="form-check-label" for="needsTime">Needs time</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Influencers</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="influencers" id="family" value="Family">
+                                <label class="form-check-label" for="family">Family</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="influencers" id="friends" value="Friends">
+                                <label class="form-check-label" for="friends">Friends</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="influencers" id="coach" value="Coach">
+                                <label class="form-check-label" for="coach">Coach</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="influencers" id="alumni" value="Alumni">
+                                <label class="form-check-label" for="alumni">Alumni</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="influencers" id="otherInfluencer" value="Other">
+                                <label class="form-check-label" for="otherInfluencer">Other</label>
+                            </div>
+                            <input type="text" class="form-control mt-2" id="otherInfluencerText" placeholder="If other, specify...">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Noted scarcity reaction ("I'm worried about seats")</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="scarcityReaction" id="strong" value="Strong">
+                                <label class="form-check-label" for="strong">Strong</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="scarcityReaction" id="mild" value="Mild">
+                                <label class="form-check-label" for="mild">Mild</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="scarcityReaction" id="none" value="None">
+                                <label class="form-check-label" for="none">None</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Communication & Personality Lens -->
+            <div class="card mb-4">
+                <div class="card-header" style="background-color: #6f42c1;">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-comments me-2"></i>
+                        5. Communication & Personality Lens
+                    </h3>
+                    <small class="text-light">Throughout Call: Use "Interview" tone, not sales</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label">Preferred tone</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="preferredTone" id="formal" value="Formal">
+                                <label class="form-check-label" for="formal">Formal</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="preferredTone" id="friendly" value="Friendly">
+                                <label class="form-check-label" for="friendly">Friendly</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Channel</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="channel" id="phone" value="Phone">
+                                <label class="form-check-label" for="phone">Phone</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="channel" id="whatsapp" value="WhatsApp">
+                                <label class="form-check-label" for="whatsapp">WhatsApp</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="channel" id="email" value="Email">
+                                <label class="form-check-label" for="email">Email</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="channel" id="inPerson" value="In-person">
+                                <label class="form-check-label" for="inPerson">In-person</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Detail level</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="detailLevel" id="dataDriven" value="Data-driven">
+                                <label class="form-check-label" for="dataDriven">Data-driven</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="detailLevel" id="highLevel" value="High-level overview">
+                                <label class="form-check-label" for="highLevel">High-level overview</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Personality model used</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="personalityModel" id="disc" value="DISC">
+                                <label class="form-check-label" for="disc">DISC</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="personalityModel" id="big5" value="Big 5">
+                                <label class="form-check-label" for="big5">Big 5</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="personalityModel" id="motivators" value="Motivators">
+                                <label class="form-check-label" for="motivators">Motivators</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="assignedTraits" class="form-label">Assigned type/traits</label>
+                            <input type="text" class="form-control" id="assignedTraits">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Objections & Triggers -->
+            <div class="card mb-4">
+                <div class="card-header" style="background-color: #fd7e14;">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        6. Objections & Triggers
+                    </h3>
+                    <small class="text-dark">Use Psychological Triggers</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="statedObjections" class="form-label">Stated objections (cost/time/eligibility)</label>
+                            <textarea class="form-control" id="statedObjections" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="unspokenHesitations" class="form-label">Unspoken hesitations</label>
+                            <textarea class="form-control" id="unspokenHesitations" rows="3"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Key trigger to push</label>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="keyTrigger" id="authority" value="Authority">
+                                        <label class="form-check-label" for="authority">Authority</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="keyTrigger" id="scarcity" value="Scarcity">
+                                        <label class="form-check-label" for="scarcity">Scarcity</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="keyTrigger" id="socialProof" value="Social Proof">
+                                        <label class="form-check-label" for="socialProof">Social Proof</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="keyTrigger" id="commitment" value="Commitment">
+                                        <label class="form-check-label" for="commitment">Commitment</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="keyTrigger" id="otherTrigger" value="Other">
+                                        <label class="form-check-label" for="otherTrigger">Other</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control" id="otherTriggerText" placeholder="If other...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Next Steps & Close -->
+            <div class="card mb-4">
+                <div class="card-header bg-secondary">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-arrow-right me-2"></i>
+                        7. Next Steps & Close
+                    </h3>
+                    <small class="text-light">Final Wrap-up: "I'll send the form—fill today to be shortlisted."</small>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="followupAsk" class="form-label">Exact follow-up ask and deadline</label>
+                            <textarea class="form-control" id="followupAsk" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="customBenefit" class="form-label">Custom benefit to re-emphasize</label>
+                            <textarea class="form-control" id="customBenefit" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Follow-up Schedule & Signature -->
+            <div class="card mb-4">
+                <div class="card-header bg-dark">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-calendar-check me-2"></i>
+                        8. Follow-up Schedule & Signature
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nextReminderDateTime" class="form-label">Next reminder Date/Time</label>
+                            <input type="datetime-local" class="form-control" id="nextReminderDateTime">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="channelFormat" class="form-label">Channel & format</label>
+                            <input type="text" class="form-control" id="channelFormat">
+                        </div>
+                        <div class="col-12">
+                            <label for="executiveSignature" class="form-label">Executive's Signature <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="executiveSignature" required>
+                            <div class="invalid-feedback">Please provide executive's signature.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-4">
+                <button type="button" class="btn btn-outline-secondary me-md-2" onclick="clearForm()">
+                    <i class="fas fa-refresh me-2"></i>Clear Form
+                </button>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-file-pdf me-2"></i>Generate PDF
+                </button>
+            </div>
+        </form>
+
+        <!-- Loading indicator -->
+        <div id="loadingIndicator" class="text-center" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Generating PDF...</span>
+            </div>
+            <p class="mt-2">Generating your PDF profile...</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
