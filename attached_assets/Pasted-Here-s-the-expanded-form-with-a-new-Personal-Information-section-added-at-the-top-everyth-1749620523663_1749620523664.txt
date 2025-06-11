@@ -1,0 +1,59 @@
+Here’s the **expanded form**, with a new **“Personal Information”** section added at the top—everything else exactly as before, with Script Checkpoints and all fields intact:
+
+---
+
+## AEDP Lead Psychological Profile & Script Adherence Form
+
+| Section & Field                                                                               | What to Capture | Script Checkpoint                                                      |
+| --------------------------------------------------------------------------------------------- | --------------- | ---------------------------------------------------------------------- |
+| **0. Personal Information**                                                                   |                 | *(Before you start, ensure you’ve confirmed these)*                    |
+| • Full Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_               |                 |                                                                        |
+| • Mobile Number: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                 |                 |                                                                        |
+| • Email Address: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                 |                 |                                                                        |
+| • Current City / Location: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                           |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **1. First Contact**                                                                          |                 | **Step 1**: “Hi, this is \[Name] from PrincipleAEDP…”                  |
+| • Did we open with the exclusivity line? ☐ Yes ☐ No                                           |                 |                                                                        |
+| • Candidate reacted positively? ☐ Yes ☐ No                                                    |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **2. Qualification Questions**                                                                |                 | **Step 2**: Ask those 5 quick qualifiers                               |
+| • Name & current education level: \_\_\_\_\_\_\_\_\_\_\_\_                                    |                 |                                                                        |
+| • Program interest (☐ Degree ☐ AEDP)                                                          |                 |                                                                        |
+| • Any part-time work/volunteering/business? ☐ Yes ☐ No                                        |                 |                                                                        |
+| • Comfort with comms (teamwork/presentations?): ☐ High ☐ Medium ☐ Low                         |                 |                                                                        |
+| • Main career goal after graduation: \_\_\_\_\_\_\_\_\_\_                                     |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **3. Core Motivation & Pain Points**                                                          |                 | **Step 4**: Build value (UGC, stipend, experience)                     |
+| • Primary “Why” (☐ Career growth ☐ Stipend ☐ Experience ☐ Prestige ☐ Other): \_\_\_\_\_\_\_\_ |                 |                                                                        |
+| • Biggest worry (e.g., workload, relocation): \_\_                                            |                 |                                                                        |
+| • Past disappointments (if any): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                               |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **4. Decision Style & Influencers**                                                           |                 | **Step 5**: Screening & Scarcity cues                                  |
+| • Decision speed: ☐ Quick ☐ Needs time                                                        |                 |                                                                        |
+| • Influencers (☐ Family ☐ Friends ☐ Coach ☐ Alumni ☐ Other): \_\_\_                           |                 |                                                                        |
+| • Noted scarcity reaction (“I’m worried about seats”): ☐ Strong ☐ Mild ☐ None                 |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **5. Communication & Personality Lens**                                                       |                 | **Throughout Call**: Use “Interview” tone, not sales                   |
+| • Preferred tone: ☐ Formal ☐ Friendly                                                         |                 |                                                                        |
+| • Channel: ☐ Phone ☐ WhatsApp ☐ Email ☐ In-person                                             |                 |                                                                        |
+| • Detail level: ☐ Data-driven ☐ High-level overview                                           |                 |                                                                        |
+| • Personality model used (☐ DISC ☐ Big 5 ☐ Motivators): \_\_\_                                |                 |                                                                        |
+| • Assigned type/traits: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                      |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **6. Objections & Triggers**                                                                  |                 | **Use Psychological Triggers**                                         |
+| • Stated objections (cost/time/eligibility): \_\_                                             |                 |                                                                        |
+| • Unspoken hesitations: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                      |                 |                                                                        |
+| • Key trigger to push: ☐ Authority ☐ Scarcity ☐ Social Proof ☐ Commitment ☐ Other: \_\_\_     |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **7. Next Steps & Close**                                                                     |                 | **Final Wrap-up**: “I’ll send the form—fill today to be shortlisted.”  |
+| • Exact follow-up ask and deadline: \_\_\_\_\_\_\_\_\_\_\_\_                                  |                 |                                                                        |
+| • Custom benefit to re-emphasize: \_\_\_\_\_\_\_\_\_\_\_\_\_\_                                |                 |                                                                        |
+|                                                                                               |                 |                                                                        |
+| **8. Follow-up Schedule & Signature**                                                         |                 |                                                                        |
+| • Next reminder Date/Time: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                       |                 |                                                                        |
+| • Channel & format: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                |                 |                                                                        |
+| 🔲 **Executive’s Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_                          |                 |                                                                        |
+
+---
+
+All original sections and Script Checkpoints are preserved—now with **full personal info** up front. Ready for PDF generation whenever you say “go!”
